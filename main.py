@@ -2,7 +2,7 @@ from flask import Flask
 from flask_restful import Resource, Api, request
 import openai, os, logging
 
-openai.api_key = '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'
+openai.api_key = os.environ.get("OPEN_AI_KEY")
 
 app = Flask(__name__)
 api = Api(app)
